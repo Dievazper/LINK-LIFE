@@ -300,10 +300,16 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Product</a></li>
-                    <li><a href="sensor3d.html">Smart Wearable</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#audience">Who is it for?</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#3d-chip-section">3D Sensor</a></li>
+                    <li><a href="#implant">The Implant</a></li>
+                    <li><a href="#app-section">The App</a></li>
+                    <li><a href="#purchase-section">The Kit</a></li>
                     <li><a href="dashboard.html">Medical UI</a></li>
-                    <li><a href="investors.html">Investors</a></li>
                     <li><a href="impact.html">Impact</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                     <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀️</button></li>
                 </ul>
             </nav>
@@ -400,31 +406,37 @@
         </section>
 
         <!-- 1. Our Story -->
-        <section class="container" style="text-align: center; max-width: 800px; padding-top: 4rem;">
+        <section id="story" class="container" style="text-align: center; max-width: 800px; padding-top: 4rem;">
             <div class="fade-in-up">
                 <div style="display: flex; justify-content: center; margin-bottom: 1rem;"><span
                         style="font-size:2rem;">📖</span></div>
                 <h2 style="font-size: clamp(2rem, 3vw, 3rem); margin-bottom: 1.5rem;">For our friend, for everyone.</h2>
                 <p
                     style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.8; text-align: left;">
-                    LinkLife wasn't born in a corporate boardroom. It was born from a tragedy. A close friend of ours
-                    suffered a sudden heart attack while he was alone. Because no one was notified in time, the medical
-                    response arrived too late. This "fatal gap" of silence cost him his life.<br><br>
-                    <strong>Ricard and Diego</strong> swore that this would never happen to anyone else. We dedicated
-                    our lives to engineering a solution that removes human dependency from emergency alerts. We built an
-                    automated lifeline so that no one ever dies waiting for help again.
+                    LinkLife wasn't born in a corporate boardroom or a purely profit-driven brainstorm. It was born from
+                    a devastating personal tragedy. A close friend of ours suffered a sudden, massive heart attack while
+                    he was resting alone at home. Because there was no one around to notice his distress and call for
+                    help, the medical response arrived terribly late. This horrific "fatal gap" of silence between the
+                    onset of the attack and the arrival of paramedics cost him his life. We realized the system is
+                    broken because it relies entirely on a conscious human being to ask for help.<br><br>
+                    <strong>Ricard and Diego</strong> swore on that day that this would never happen to anyone else. We
+                    dedicated our engineering and biological backgrounds to create a solution that removes the burden of
+                    communication from the patient entirely. We built an automated, silent, sub-dermal lifeline—so that
+                    no matter where you are, or if you lose consciousness, the ambulance is already on its way. We want
+                    to ensure that no one ever dies waiting for help again, simply because they were alone.
                 </p>
             </div>
         </section>
 
         <!-- 2. Target Audience -->
-        <section class="container" style="padding-top: 4rem;">
+        <section id="audience" class="container" style="padding-top: 4rem;">
             <div class="fade-in-up text-center">
                 <h2 class="section-title">Who is this for?</h2>
                 <p
                     style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    LinkLife is designed to protect those who need it most, giving absolute peace of mind to them and
-                    their families.
+                    While the vision of LinkLife is universal cardiovascular protection, the current generation of the
+                    device is specifically engineered and rigorously tested to provide absolute peace of mind to the
+                    highest-risk populations.
                 </p>
             </div>
 
@@ -434,53 +446,67 @@
                     onmouseout="this.style.transform='translateY(0)'">
                     <div style="font-size: 3rem; margin-bottom: 1rem;">🫀</div>
                     <h3 style="margin-bottom: 1rem;">Cardiac Patients</h3>
-                    <p style="color: var(--text-muted);">Individuals with a history of arrhythmias, previous heart
-                        attacks, or cardiovascular risks who need 24/7 internal monitoring.</p>
+                    <p style="color: var(--text-muted);">Individuals with a known history of severe arrhythmias, those
+                        who have suffered previous heart attacks, or people identified with high cardiovascular risk
+                        scores. LinkLife acts as a 24/7 internal guardian, detecting micro-anomalies weeks before a
+                        catastrophic event occurs, and auto-dispatching paramedics during acute failures.</p>
                 </div>
                 <div class="glass-panel text-center" style="transition: transform 0.3s;"
                     onmouseover="this.style.transform='translateY(-5px)'"
                     onmouseout="this.style.transform='translateY(0)'">
                     <div style="font-size: 3rem; margin-bottom: 1rem;">👴</div>
                     <h3 style="margin-bottom: 1rem;">Elderly Living Alone</h3>
-                    <p style="color: var(--text-muted);">Seniors living independently whose families want a 100%
-                        guarantee of instant medical dispatch in case of emergencies.</p>
+                    <p style="color: var(--text-muted);">Seniors living independently whose families live far away and
+                        want a 100% guarantee of instant medical dispatch in case of sudden drops in vitals. It removes
+                        the need for cumbersome panic buttons that can be dropped or forgotten; the chip is always
+                        inside, always working.</p>
                 </div>
                 <div class="glass-panel text-center" style="transition: transform 0.3s;"
                     onmouseover="this.style.transform='translateY(-5px)'"
                     onmouseout="this.style.transform='translateY(0)'">
                     <div style="font-size: 3rem; margin-bottom: 1rem;">🏃‍♂️</div>
                     <h3 style="margin-bottom: 1rem;">High-Performance Athletes</h3>
-                    <p style="color: var(--text-muted);">Professionals pushing their bodies to the absolute limit,
-                        requiring precise biomechanical and ECG telemetry.</p>
+                    <p style="color: var(--text-muted);">Top-tier professionals pushing their bodies to the absolute
+                        biomechanical limit. Extreme exertion can sometimes trigger undiagnosed congenital heart
+                        defects. LinkLife provides precise, medical-grade ECG telemetry directly to their coaching and
+                        medical staff in real-time.</p>
                 </div>
             </div>
         </section>
 
         <!-- 3. Certifications & Global Reach -->
-        <section class="container" style="padding-top: 5rem; padding-bottom: 3rem;">
+        <section id="certifications" class="container" style="padding-top: 5rem; padding-bottom: 3rem;">
             <div class="fade-in-up text-center">
                 <h2 class="section-title">Global Trust & Certifications</h2>
+                <p
+                    style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Medical devices require uncompromising safety profiles. LinkLife has undergone years of clinical
+                    trials to secure the highest levels of global medical endorsements.
+                </p>
             </div>
             <div class="glass-panel fade-in-up delay-100"
                 style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: start; padding: 3rem; gap: 2rem; margin-top: 2rem; border-color: rgba(255,255,255,0.1);">
                 <div style="text-align: center; flex: 1; min-width: 200px;">
                     <div style="font-size: 3.5rem; margin-bottom: 1rem;">🇪🇺</div>
                     <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #fff;">CE Medical Class III</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0 auto; max-width: 200px;">Approved
-                        by the European Union as a high-risk active implantable medical device.</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0 auto; max-width: 200px;">Fully
+                        approved by the European Union Directives as a highly-regulated active implantable medical
+                        device, ensuring strict biocompatibility and surgical safety.</p>
                 </div>
                 <div style="text-align: center; flex: 1; min-width: 200px;">
                     <div style="font-size: 3.5rem; margin-bottom: 1rem;">🌐</div>
                     <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #fff;">WHO Endorsed Guidelines</h4>
                     <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0 auto; max-width: 200px;">Aligns
-                        with World Health Organization strategies for cardiovascular disease prevention.</p>
+                        with World Health Organization strategies for cardiovascular disease prevention, utilizing their
+                        globally standardized ECG anomaly detection thresholds.</p>
                 </div>
                 <div style="text-align: center; flex: 1; min-width: 200px;">
                     <div style="font-size: 3.5rem; margin-bottom: 1rem;">🌍</div>
                     <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #fff;">190+ Countries</h4>
                     <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0 auto; max-width: 200px;">Our
-                        geolocation emergency API natively integrates with 911/112 dispatch centers seamlessly
-                        worldwide.</p>
+                        proprietary emergency API natively integrates with 911 (North America), 112 (Europe), and other
+                        dispatch centers across 190+ countries. Whether you are at home or traveling globally, LinkLife
+                        knows your exact location and the local emergency number.</p>
                 </div>
             </div>
         </section>
@@ -492,7 +518,10 @@
                 <h2 class="section-title">The Sub-Dermal Architecture</h2>
                 <p
                     style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    A titanium and biocompatible polymer capsule. Drag to rotate and inspect the internal components.
+                    Enclosed in a medical-grade titanium and biocompatible polymer capsule, the LinkLife sensor is
+                    smaller than a pill but houses immense processing power. It reads electrical currents from the
+                    muscle tissue directly above the heart, eliminating the external noise that plagues smartwatches.
+                    Drag to rotate and inspect the internal components.
                 </p>
             </div>
 
@@ -529,12 +558,14 @@
         </section>
 
         <!-- 2. Implant Procedure -->
-        <section class="container" style="text-align: center; padding-top: 4rem;">
+        <section id="implant" class="container" style="text-align: center; padding-top: 4rem;">
             <div class="fade-in-up">
                 <h2 class="section-title">How It's Applied</h2>
                 <p
                     style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    A minimally invasive 5-minute procedure under local anesthesia.
+                    We developed a proprietary insertion mechanism that makes the implant process as quick and painless
+                    as a standard vaccination. It is a minimally invasive, 5-minute outpatient procedure performed under
+                    local anesthesia in the upper pectoral muscle. No open surgery, no stitches required.
                 </p>
             </div>
 
@@ -574,7 +605,11 @@
                 <h2 class="section-title">The Patient Hub App</h2>
                 <p
                     style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    The digital shield connecting your Intramuscular Chip with global emergency endpoints.
+                    The digital shield connecting your Intramuscular Chip with global emergency endpoints. The app uses
+                    an encrypted Bluetooth LE connection to constantly receive the sensor's telemetry. If a critical
+                    heart failure is flagged by the implant, the app instantly retrieves your GPS coordinates and
+                    broadcasts an SOS data packet containing your exact location, medical history, and real-time ECG
+                    directly to the nearest ambulance dispatch network.
                 </p>
             </div>
 
@@ -669,7 +704,10 @@
                 <h2 class="section-title">The LinkLife Protection Kit</h2>
                 <p
                     style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    Everything you need to secure your cardiac health for the next 5 years.
+                    Everything you need to secure your cardiac health for the next half-decade. We have subsidized the
+                    initial cost of the hardware to make this life-saving technology as accessible as possible. Your
+                    subscription funds the 24/7 global API server maintenance, ensuring we are always online when your
+                    heart needs us.
                 </p>
             </div>
 
@@ -722,7 +760,7 @@
 
     </main>
 
-    <footer
+    <footer id="contact"
         style="border-top: 1px solid var(--glass-border); padding: 4rem 0 2rem 0; margin-top: 4rem; background: rgba(0,0,0,0.3);">
         <div class="container fade-in-up">
             <div
