@@ -1,0 +1,39 @@
+# Implementation Plan - Smart Gadget Launch
+
+## Goal Description
+Launch a new smart gadget. It is an intramuscular pulse sensor designed for **general public use** (simplifying health monitoring). It monitors heart rate, detects cardiac arrest, and automatically alerts emergency services via a subscription model. The installation is simple and requires no medical expertise.
+
+## User Review Required
+- **Visual Style**: Clean, modern, medical-tech aesthetic (accessible to all ages), not Cyberpunk.
+- **Target Audience**: General population, specifically those concerned about heart health or with elderly relatives. *Investor focus for the ad.*
+
+## Proposed Strategy
+
+### 1. Product Definition
+Refine the core concept to have broad appeal.
+- **Product Name Options**: PulseNode, HeartGuard, LifeLink, CardioSense, VitalKeep.
+- **Gadget**: Sub-dermal/Intramuscular Heart Rate Monitor.
+- **Tech Stack**: IoT connectivity (LoRa/5G), Bio-impedance analysis, simple mobile app pairing.
+- **Business Model**: Low hardware cost + Monthly "SafeHeart" Subscription.
+
+### 2. Assets to Create
+#### [NEW] [product_details.md](file:///C:/Users/Usuari/.gemini/antigravity/brain/5db73d5b-7db5-4c3c-ab96-e92484250d98/product_details.md)
+Contains:
+- Selected Name (from options)
+- Slogan options (Reassuring & Smart)
+- Technical Specs (User-friendly terms)
+- Price points
+
+#### [NEW] [advert_content.md](file:///C:/Users/Usuari/.gemini/antigravity/brain/5db73d5b-7db5-4c3c-ab96-e92484250d98/advert_content.md)
+- **Investor Pitch Deck Content**: Focusing on market size, recurring revenue (subscription), and ease of adoption.
+- Oral Presentation Script
+- Contest Pitch ("Why this saves lives")
+
+#### Visuals (via generate_image)
+- **Logo**: Clean, medical-grade trust + tech. Blue/Green/White palette.
+- **Ad Campaign**: Lifestyle image showing peace of mind, or a high-end product render for investors.
+- **Installation Triptych**: 3-step visual guide (1. Unbox/Prepare, 2. Place Sensor (Painless), 3. Connect App).
+
+## Verification Plan
+- Review generated text against all constraints (Name, Target, Problem, Specs, Advantage, Price, Slogan).
+- Ensure the specific user requirement ("intramuscular", "easy install", "subscription") is central to the pitch.

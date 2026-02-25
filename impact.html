@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Impact | LinkLife</title>
+    <meta name="description" content="Global Lives Saved Counter for LinkLife">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .counter-wrap {
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .counter-value {
+            font-size: clamp(5rem, 10vw, 12rem);
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(180deg, var(--ecg-normal) 0%, rgba(50, 215, 75, 0.4) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 80px rgba(50, 215, 75, 0.2);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .counter-label {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            color: var(--text-color);
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+        }
+
+        .pulse-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 2px solid var(--ecg-normal);
+            opacity: 0;
+            z-index: -1;
+        }
+
+        @keyframes expand-ring {
+            0% {
+                width: 100px;
+                height: 100px;
+                opacity: 0.8;
+            }
+
+            100% {
+                width: 800px;
+                height: 800px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">❤️</span> LinkLife
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Product</a></li>
+                    <li><a href="sensor3d.html">Smart Wearable</a></li>
+                    <li><a href="dashboard.html">Medical UI</a></li>
+                    <li><a href="investors.html">Investors</a></li>
+                    <li><a href="impact.html" class="active">Impact</a></li>
+                    <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀️</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="min-h-screen">
+        <div class="container">
+            <div class="counter-wrap fade-in-up">
+
+                <div class="counter-label">Lives Saved Worldwide</div>
+                <div class="counter-value" id="livesCounter">1,250</div>
+                <p
+                    style="color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto; line-height: 1.6;">
+                    Every number on this counter represents a mother, father, sibling, or friend who suffered a severe
+                    cardiac event, but lived to tell the tale because they were wearing LinkLife.
+                </p>
+
+                <!-- Container for animated rippling rings -->
+                <div id="ringContainer"></div>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;" class="fade-in-up delay-200">
+                <a href="alert-demo.html" class="btn btn-outline"
+                    style="border-color: var(--ecg-normal); color: var(--ecg-normal);">See How We Do It</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentLives = 1250;
+            const counterElement = document.getElementById('livesCounter');
+            const ringContainer = document.getElementById('ringContainer');
+
+            function triggerSave() {
+                currentLives++;
+                counterElement.innerText = currentLives.toLocaleString();
+
+                // Create ripple effect
+                const ring = document.createElement('div');
+                ring.classList.add('pulse-ring');
+                ring.style.animation = 'expand-ring 2s ease-out forwards';
+
+                ringContainer.appendChild(ring);
+
+                // Cleanup ring
+                setTimeout(() => {
+                    if (ring.parentNode === ringContainer) {
+                        ringContainer.removeChild(ring);
+                    }
+                }, 2000);
+            }
+
+            // Random triggers every few seconds to simulate global usage
+            function scheduleNext() {
+                // Random time between 2 and 6 seconds
+                const delay = Math.random() * 4000 + 2000;
+                setTimeout(() => {
+                    triggerSave();
+                    scheduleNext();
+                }, delay);
+            }
+
+            // Start loop
+            scheduleNext();
+        });
+    </script>
+</body>
+
+</html>

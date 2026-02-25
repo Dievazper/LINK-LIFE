@@ -1,0 +1,39 @@
+# Pla d'Implementació - Llançament Smart Gadget
+
+## Descripció de l'Objectiu
+Llançament d'un nou gadget intel·ligent. És un sensor de pols intramuscular dissenyat per al **públic general** (simplificant el monitoratge de salut). Monitoritza la freqüència cardíaca, detecta aturades cardíaques i alerta automàticament els serveis d'emergència mitjançant un model de subscripció. La instal·lació és senzilla i no requereix coneixements mèdics.
+
+## Revisió de l'Usuari Requerida
+- **Estil Visual**: Estètica neta, moderna i mèdica (accessible a totes les edats), fugint de l'estil Cyberpunk.
+- **Públic Objectiu**: Població general, especialment aquells preocupats per la salut cardíaca o amb familiars grans. *Enfocament a inversors per a l'anunci.*
+
+## Estratègia Proposada
+
+### 1. Definició del Producte
+Refinar el concepte principal per tenir un atractiu ampli.
+- **Opcions de Nom**: PulseNode, HeartGuard, LifeLink, CardioSense, VitalKeep.
+- **Gadget**: Monitor de freqüència cardíaca subdèrmic/intramuscular.
+- **Stack Tecnològic**: Connectivitat IoT (LoRa/5G), anàlisi de bioimpedància, aparellament senzill amb app mòbil.
+- **Model de Negoci**: Baix cost de maquinari + Subscripció Mensual "SafeHeart".
+
+### 2. Actius per Crear
+#### [NOU] [product_details.md](file:///C:/Users/Usuari/.gemini/antigravity/brain/5db73d5b-7db5-4c3c-ab96-e92484250d98/product_details.md)
+Conté:
+- Nom Seleccionat (d'entre les opcions)
+- Opcions d'eslògan (Tranquil·litzador i Intel·ligent)
+- Especificacions Tècniques (Llenguatge accessible)
+- Punts de Preu
+
+#### [NOU] [advert_content.md](file:///C:/Users/Usuari/.gemini/antigravity/brain/5db73d5b-7db5-4c3c-ab96-e92484250d98/advert_content.md)
+- **Pitch per a Inversors**: Centrat en la mida del mercat, ingressos recurrents (subscripció) i facilitat d'adopció.
+- Guió de Presentació Oral
+- Pitch per al Concurs ("Per què això salva vides")
+
+#### Visuals (via generate_image)
+- **Logotip**: Net, confiança de grau mèdic + tecnologia. Paleta Blau/Verd/Blanc.
+- **Campanya Publicitària**: Imatge d'estil de vida que mostri tranquil·litat, o un render de producte d'alta gamma per a inversors.
+- **Tríptic d'Instal·lació**: Guia visual de 3 passos (1. Desempaquetar/Preparar, 2. Col·locar Sensor (Indolor), 3. Connectar App).
+
+## Pla de Verificació
+- Revisar el text generat contra totes les restriccions (Nom, Objectiu, Problema, Especificacions, Avantatge, Preu, Eslògan).
+- Assegurar que el requisit específic de l'usuari ("intramuscular", "instal·lació fàcil", "subscripció") sigui central en el discurs.

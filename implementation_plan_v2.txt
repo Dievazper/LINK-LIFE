@@ -1,0 +1,33 @@
+# Implementation Plan - Smart Gadget Launch (Updated)
+
+## Goal Description
+Expand the **LifeLink** project to include a detailed 5-minute presentation script for two presenters and a comprehensive HTML visual presentation in Catalan. Organize all assets into a dedicated folder.
+
+## User Review Required
+- **Script format**: Dialogue format for 2 speakers (Speaker A & Speaker B).
+- **Language**: Script in English (implied by previous context, but will verify if user wants it in Catalan too? The prompt asked for "HTML in Catalan" but didn't specify script language. I will assume the script stays in English as per the original assignment requiring English, but the HTML visuals are in Catalan as requested). *Self-correction: User asked for "archivo en ingles y otro en catalan" earlier. I will provide the script in English as it's the "Defense".*
+- **Visuals**: HTML file acting as a slide deck/website.
+
+## Proposed Strategy
+
+### 1. Content Expansion
+- **Oral Presentation**: Rewrite to be ~800-1000 words.
+    - **Speaker A**: The Visionary (Focus on problem, emotion, impact).
+    - **Speaker B**: The Tech Expert (Focus on specs, installation, business model).
+    - **Structure**: Hook -> The "Silent Killer" Problem -> Introducing LifeLink -> Live Demo (Mime) -> Tech Deep Dive -> Business Model -> Conclusion.
+
+### 2. Visual Support (HTML)
+- **File**: `Smart Gadget/presentacio.html`
+- **Language**: Catalan.
+- **Structure**:
+    - Slide 1: Títol (LifeLink) & Slogan.
+    - Slide 2: El Problema (Aturades cardíaques).
+    - Slide 3: La Solució (El sensor).
+    - Slide 4: Tecnologies (LoRa/5G, Bio-impedància).
+    - Slide 5: Instal·lació (Tríptic visual - using placeholders if images failed).
+    - Slide 6: Model de Negoci (49€ + Subscripció).
+    - Slide 7: Equip & Contacte.
+- **Style**: Modern, clean, "LifeLink" branding (Blue/White).
+
+### 3. Organization
+- Move `product_details.md`, `advert_content.md`, `implementation_plan*.md` into `Smart Gadget/`.

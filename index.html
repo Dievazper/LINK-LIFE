@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkLife | The End of Too Late</title>
+    <meta name="description"
+        content="A smart wearable cardiac emergency system connected to a smartphone app that automatically alerts emergency services when detecting abnormal ECG patterns.">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">❤️</span> LinkLife
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Product</a></li>
+                    <li><a href="sensor3d.html">Smart Wearable</a></li>
+                    <li><a href="dashboard.html">Medical UI</a></li>
+                    <li><a href="investors.html">Investors</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀️</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero min-h-screen">
+            <div class="hero-video-wrap">
+                <!-- Autoplay loop muted video -->
+                <video class="hero-video" autoplay loop muted playsinline>
+                    <source src="assets/videos/hero-demo.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-content container">
+                <div class="fade-in-up">
+                    <h1 class="hero-title">The End of<br>Too Late.</h1>
+                </div>
+                <div class="fade-in-up delay-100">
+                    <p class="hero-subtitle">The first smart wearable cardiac emergency system that automatically alerts
+                        services when detecting abnormal ECG patterns.</p>
+                </div>
+                <div class="fade-in-up delay-200"
+                    style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                    <a href="alert-demo.html" class="btn btn-accent">Simulate Emergency</a>
+                    <!-- <a href="presentation.html" class="btn btn-primary">Pitch Deck</a> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Grid (Parallax depth feel via animations) -->
+        <section class="container" style="padding-top: 4rem;">
+            <div class="fade-in-up">
+                <h2 class="section-title">Explore the LinkLife Ecosystem</h2>
+            </div>
+
+            <div class="dashboard-grid">
+
+                <a href="sensor3d.html" style="text-decoration: none; color: inherit;">
+                    <div class="glass-panel fade-in-up delay-100"
+                        style="height: 100%; transition: transform 0.3s; cursor: pointer;"
+                        onmouseover="this.style.transform='translateY(-10px)'"
+                        onmouseout="this.style.transform='translateY(0)'">
+                        <div class="metric-header" style="margin-bottom: 1rem;"><span style="font-size:2rem;">🧠</span>
+                            Hardware Focus</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Interactive 3D Sensor</h3>
+                        <p style="color: var(--text-muted);">Experience our wearable in a 3D environment. Drag to rotate
+                            and inspect the dual-sensor design.</p>
+                    </div>
+                </a>
+
+                <a href="dashboard.html" style="text-decoration: none; color: inherit;">
+                    <div class="glass-panel fade-in-up delay-200"
+                        style="height: 100%; transition: transform 0.3s; cursor: pointer;"
+                        onmouseover="this.style.transform='translateY(-10px)'"
+                        onmouseout="this.style.transform='translateY(0)'">
+                        <div class="metric-header" style="margin-bottom: 1rem;"><span style="font-size:2rem;">📊</span>
+                            Medical Interface</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Live Dashboard</h3>
+                        <p style="color: var(--text-muted);">Real-time animated ECG, heart rate monitoring, and patient
+                            status tracking for medical professionals.</p>
+                    </div>
+                </a>
+
+                <a href="investors.html" style="text-decoration: none; color: inherit;">
+                    <div class="glass-panel fade-in-up delay-300"
+                        style="height: 100%; transition: transform 0.3s; cursor: pointer;"
+                        onmouseover="this.style.transform='translateY(-10px)'"
+                        onmouseout="this.style.transform='translateY(0)'">
+                        <div class="metric-header" style="margin-bottom: 1rem;"><span style="font-size:2rem;">💰</span>
+                            Business Growth</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Investor Portal</h3>
+                        <p style="color: var(--text-muted);">Access market growth charts, revenue projections, and a
+                            dynamic ROI calculator for your €5M Series A investment.</p>
+                    </div>
+                </a>
+
+                <a href="impact.html" style="text-decoration: none; color: inherit;">
+                    <div class="glass-panel fade-in-up delay-100"
+                        style="height: 100%; transition: transform 0.3s; cursor: pointer;"
+                        onmouseover="this.style.transform='translateY(-10px)'"
+                        onmouseout="this.style.transform='translateY(0)'">
+                        <div class="metric-header" style="margin-bottom: 1rem;"><span style="font-size:2rem;">🌍</span>
+                            Global Footprint</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Lives Saved</h3>
+                        <p style="color: var(--text-muted);">Watch the real-time aggregated counter of cardiac
+                            interventions enabled by LinkLife worldwide.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Story section -->
+        <section class="container" style="text-align: center; max-width: 800px;">
+            <div class="fade-in-up">
+                <h2 style="font-size: clamp(2rem, 3vw, 3rem); margin-bottom: 1.5rem;">Designed by Ricard & Diego</h2>
+                <p style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 2rem;">
+                    Conceived to eliminate the fatal gap between heart failure and medical response. We have bridged the
+                    disconnect by creating an automated lifeline.
+                </p>
+                <!-- <a href="presentation.html" class="btn btn-outline">Read the Manifesto</a> -->
+            </div>
+        </section>
+    </main>
+
+    <footer style="border-top: 1px solid var(--glass-border); padding: 3rem 0; margin-top: 4rem;">
+        <div class="container"
+            style="display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.9rem;">
+            <p>&copy; 2026 LinkLife startup. All rights reserved.</p>
+            <div style="display: flex; gap: 1.5rem;">
+                <span>Confidential</span>
+                <span>Silicon Valley, CA</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

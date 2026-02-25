@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Simulation | LinkLife</title>
+    <meta name="description" content="Live Cardiac Alert Simulation">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">❤️</span> LinkLife
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Product</a></li>
+                    <li><a href="sensor3d.html">Smart Wearable</a></li>
+                    <li><a href="dashboard.html">Medical UI</a></li>
+                    <li><a href="investors.html">Investors</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀️</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="min-h-screen container" style="text-align: center; padding-top: 120px;">
+
+        <div class="fade-in-up" style="max-width: 600px; margin: 0 auto 4rem;">
+            <h1 class="section-title" style="margin-bottom: 1rem;">The LinkLife Protocol</h1>
+            <p style="color: var(--text-muted); font-size: 1.2rem;">
+                When the core sensor detects a critical abnormality, an autonomous protocol initiates.
+                There is no need to unlock a phone or press a button.
+            </p>
+        </div>
+
+        <div class="fade-in-up delay-100">
+            <button id="triggerEmergency" class="btn btn-accent"
+                style="padding: 1.5rem 4rem; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 2px; box-shadow: 0 0 30px var(--accent-glow);">
+                Trigger Cardiac Event
+            </button>
+        </div>
+
+        <div class="fade-in-up delay-200" style="margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+            Click to simulate a Ventricular Fibrillation (VFib) detection.
+        </div>
+    </main>
+
+    <!-- Emergency Modal Sequence -->
+    <div class="modal-overlay" id="emergencyModalOverlay">
+        <div class="alert-modal">
+            <div class="alert-icon">⚠️</div>
+            <h2 class="alert-title">Critical Arrythmia Detected</h2>
+            <p class="alert-desc">LinkLife Protocol Initiated. You have 10 seconds to cancel if this is a false alarm.
+            </p>
+
+            <div class="alert-steps">
+                <div class="alert-step" id="step1">
+                    <span class="step-icon">⏳</span> Initiating sequence...
+                </div>
+                <div class="alert-step" id="step2">
+                    <span class="step-icon">📍</span> GPS Location Locked
+                </div>
+                <div class="alert-step" id="step3">
+                    <span class="step-icon">📈</span> ECG Telemetry Transmitted
+                </div>
+                <div class="alert-step" id="step4">
+                    <span class="step-icon">🚑</span> Emergency Services Dispatched
+                </div>
+                <div class="alert-step" id="step5">
+                    <span class="step-icon">🏥</span> Nearest Hospital Notified (ETA: 4 mins)
+                </div>
+            </div>
+
+            <button id="cancelEmergency" class="btn btn-outline"
+                style="width: 100%; border-color: #666; color: #ccc;">Cancel Alert</button>
+        </div>
+    </div>
+
+    <!-- Background Audio (optional/simulated) -->
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const triggerBtn = document.getElementById('triggerEmergency');
+            const cancelBtn = document.getElementById('cancelEmergency');
+            const modalOverlay = document.getElementById('emergencyModalOverlay');
+
+            const steps = [
+                document.getElementById('step1'),
+                document.getElementById('step2'),
+                document.getElementById('step3'),
+                document.getElementById('step4'),
+                document.getElementById('step5')
+            ];
+
+            let sequenceTimeouts = [];
+
+            triggerBtn.addEventListener('click', () => {
+                // 1. Activate Modal
+                modalOverlay.classList.add('active');
+
+                // 2. Flash Red Background UI
+                document.body.classList.add('emergency-mode');
+
+                // 3. Reset steps
+                steps.forEach(step => {
+                    step.classList.remove('active', 'completed');
+                    step.querySelector('.step-icon').innerText = '⏳';
+                });
+
+                // 4. Start Sequence
+                steps[0].classList.add('active');
+
+                sequenceTimeouts.push(setTimeout(() => completeStep(0, 1, '📍'), 1500));
+                sequenceTimeouts.push(setTimeout(() => completeStep(1, 2, '📈'), 3000));
+                sequenceTimeouts.push(setTimeout(() => completeStep(2, 3, '🚑'), 4500));
+                sequenceTimeouts.push(setTimeout(() => completeStep(3, 4, '🏥'), 6000));
+
+                sequenceTimeouts.push(setTimeout(() => {
+                    steps[4].classList.remove('active');
+                    steps[4].classList.add('completed');
+                    steps[4].querySelector('.step-icon').innerText = '✅';
+                    document.querySelector('.alert-title').innerText = 'Help is on the way.';
+                    document.querySelector('.alert-desc').innerText = 'Stay still. An ambulance will arrive in approx 4 minutes.';
+                    document.querySelector('.alert-title').style.color = 'var(--ecg-normal)';
+                    cancelBtn.style.display = 'none';
+                    // Stop flashing
+                    document.body.classList.remove('emergency-mode');
+                }, 7500));
+            });
+
+            function completeStep(currentIndex, nextIndex, nextIcon) {
+                steps[currentIndex].classList.remove('active');
+                steps[currentIndex].classList.add('completed');
+                steps[currentIndex].querySelector('.step-icon').innerText = '✅';
+
+                if (steps[nextIndex]) {
+                    steps[nextIndex].classList.add('active');
+                    steps[nextIndex].querySelector('.step-icon').innerText = nextIcon;
+                }
+            }
+
+            cancelBtn.addEventListener('click', () => {
+                // Abort
+                sequenceTimeouts.forEach(t => clearTimeout(t));
+                sequenceTimeouts = [];
+
+                modalOverlay.classList.remove('active');
+                document.body.classList.remove('emergency-mode');
+                document.querySelector('.alert-title').innerText = 'Critical Arrythmia Detected';
+                document.querySelector('.alert-desc').innerText = 'LinkLife Protocol Initiated. You have 10 seconds to cancel if this is a false alarm.';
+                document.querySelector('.alert-title').style.color = 'var(--ecg-danger)';
+            });
+        });
+    </script>
+</body>
+
+</html>

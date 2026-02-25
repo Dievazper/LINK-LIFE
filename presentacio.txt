@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentació LifeLink</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            overflow-x: hidden;
+        }
+        .slide {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            box-sizing: border-box;
+            border-bottom: 5px solid #0056b3;
+        }
+        .slide:nth-child(even) {
+            background-color: #e3f2fd;
+        }
+        .title {
+            font-size: 4rem;
+            color: #0056b3;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .slogan {
+            font-size: 1.5rem;
+            color: #555;
+            font-style: italic;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #004494;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .highlight {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+        .card-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1: Títol -->
+    <div class="slide" id="intro">
+        <h1 class="title">LifeLink</h1>
+        <p class="slogan">El teu pols, connectat. La teva vida, protegida.</p>
+        <p>Un gadget que salva vides. Invisible. Intel·ligent. Immortal.</p>
+    </div>
+
+    <!-- Slide 2: El Problema -->
+    <div class="slide" id="problem">
+        <div class="content">
+            <h2>El Problema: L'Assassí Silenciós</h2>
+            <p>Cada any moren milions de persones per aturades cardíaques quan estan soles.</p>
+            <ul>
+                <li>Els rellotges intel·ligents es queden sense bateria.</li>
+                <li>Ens oblidem de posar-nos-els.</li>
+                <li>Quan tens un atac de cor, <strong>no pots demanar ajuda</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 3: La Solució -->
+    <div class="slide" id="solution">
+        <div class="content">
+            <h2>La Solució: LifeLink</h2>
+            <p>Un sensor de pols <strong>intramuscular</strong> i <strong>subdèrmic</strong>.</p>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Invisible</h3>
+                    <p>Mida d'un gra d'arròs. No es veu, no es nota.</p>
+                </div>
+                <div class="card">
+                    <h3>Autònom</h3>
+                    <p>Càrrega piezoelèctrica. No necessita bateria durant 10 anys.</p>
+                </div>
+                <div class="card">
+                    <h3>Connectat</h3>
+                    <p>Connexió directa 5G amb emergències.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Tecnologia -->
+    <div class="slide" id="tech">
+        <div class="content">
+            <h2>Tecnologia Innovadora</h2>
+            <ul>
+                <li><strong>Energy Harvesting:</strong> S'alimenta del moviment dels teus músculs.</li>
+                <li><strong>Edge AI:</strong> Processador ARM Cortex-M85 que detecta arítmies en mil·lisegons.</li>
+                <li><strong>Dual-Connectivity:</strong> LoRaWAN per a dades diàries + 5G Beacon per a emergències crítiques.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 5: Instal·lació -->
+    <div class="slide" id="install">
+        <div class="content">
+            <h2>Instal·lació en 3 Passos</h2>
+            <p>Tan fàcil com posar-se una vacuna.</p>
+            <ol style="text-align: left; max-width: 600px; margin: 0 auto; font-size: 1.2rem;">
+                <li><strong>Preparació:</strong> Netejar la zona del braç.</li>
+                <li><strong>Aplicació:</strong> Un sol clic amb l'aplicador estèril (indolor).</li>
+                <li><strong>Connexió:</strong> Apropar el mòbil per activar el xip via NFC.</li>
+            </ol>
+            <p><em>(Dissenyat per a ser instal·lat en farmàcies o a casa)</em></p>
+        </div>
+    </div>
+
+    <!-- Slide 6: Model de Negoci -->
+    <div class="slide" id="business">
+        <div class="content">
+            <h2>Model de Negoci</h2>
+            <p>Democratitzant la salut d'alta tecnologia.</p>
+            <div class="card-container">
+                <div class="card">
+                    <h3 class="highlight">49.99 €</h3>
+                    <p>Hardware (Preu de llançament)</p>
+                </div>
+                <div class="card">
+                    <h3 class="highlight">9.99 €/mes</h3>
+                    <p>Subscripció "SafeHeart" (Monitoratge 24/7)</p>
+                </div>
+            </div>
+            <p style="margin-top: 2rem;">Públic Objectiu: Gent gran, pacients cardíacs, professionals amb estrès.</p>
+        </div>
+    </div>
+
+    <!-- Slide 7: Conclusió -->
+    <div class="slide" id="outro">
+        <div class="content">
+            <h1 class="title">LifeLink</h1>
+            <h2>Vota pel "Millor Gadget"</h2>
+            <p>Perquè la tecnologia no ha de ser només divertida. Ha de ser vital.</p>
+            <a href="#" class="btn">Inverteix avui</a>
+        </div>
+    </div>
+
+    <div class="footer">Projecte Smart Gadget - 2026</div>
+
+</body>
+</html>

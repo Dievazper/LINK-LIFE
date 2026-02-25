@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_OTHER",
+  "summary": "Script for a 2-person presentation (min 5 minutes) about LifeLink.",
+  "updatedAt": "2026-02-18T12:06:34.114723900Z"
+}

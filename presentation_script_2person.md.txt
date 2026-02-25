@@ -1,0 +1,117 @@
+# LifeLink: Oral Presentation Script (2 Presenters)
+
+**Time Estimate:** 5-6 Minutes
+**Characters:**
+*   **ALEX (The Visionary):** Focuses on the emotional impact, the problem, and the "why."
+*   **SAM (The Tech Specialist):** Focuses on the "how," the specs, the installation, and the business model.
+
+---
+
+**(0:00 - 0:45) INTRODUCTION & THE HOOK**
+
+**ALEX:** (Standing center, grave tone) 
+Imagine this. You are alone at home. Maybe you’re watching TV, or working late on your computer. Suddenly, your chest tightens. You feel dizzy. 
+(Pause)
+You try to reach for your phone, but it’s just out of reach. You try to call out, but you can’t breath. 
+In that moment, your smartwatch—if you remembered to charge it, if you are wearing it—might beep. But who hears it?
+
+**SAM:** (Steps forward)
+Every year, thousands of people die from cardiac arrests that happen when they are alone. They call it the "Silent Killer." 
+Current technology fails us because it relies on *us*. It relies on us wearing a device, charging a battery, and pressing a button.
+
+**ALEX:**
+But what if the technology didn't need *you* to do anything? What if it was just... part of you?
+
+**(0:45 - 1:30) INTRODUCING LIFELINK**
+
+**ALEX:**
+We are proud to introduce **LifeLink**. 
+(Both point to the screen/visual aid showing the LifeLink logo)
+LifeLink isn’t a wearable. It’s an *installable*.
+
+**SAM:**
+It is a sub-dermal, intramuscular pulse sensor. It’s about the size of a grain of rice. Once installed, it becomes a permanent, invisible guardian for your heart.
+
+**ALEX:**
+No wristbands. No chest straps. No chargers. 
+You live your life, and LifeLink watches over you, 24/7/365.
+
+**(1:30 - 2:30) HOW IT WORKS (THE DEMO)**
+
+**SAM:**
+Let’s talk about how it works. 
+(Gestures to the "Installation" slide)
+The installation takes less than 60 seconds. It’s painless—like a quick pinch. We use a sterile, pre-loaded applicator. You place it on the upper arm, press, and it’s done.
+
+**ALEX:**
+And once it’s there?
+
+**SAM:**
+It wakes up. 
+Using **Piezoelectric Energy Harvesting**, it powers itself from the natural movement of your muscles and blood flow. It never needs a battery change for at least 10 years.
+
+**ALEX:**
+(Smiling)
+So I can forget it’s there?
+
+**SAM:**
+Exactly. That’s the point. 
+But LifeLink doesn’t forget you. It uses an embedded **ARM Cortex-M85** processor with Edge AI. It learns *your* specific heart rhythm. 
+If it detects a lethal arrhythmia—like Ventricular Fibrillation—it doesn’t just beep. It acts.
+
+**(2:30 - 3:30) CONNECTIVITY & ALERTS**
+
+**ALEX:**
+Most devices connect to your phone via Bluetooth. But what if your phone is in the other room? What if it’s dead?
+
+**SAM:**
+LifeLink has a dual-connectivity stack. 
+1.  **LoRaWAN:** For constant, low-power health stats sent to your doctor or our cloud dashboard.
+2.  **Emergency 5G Beacon:** In a crisis, effectively bypassing your phone, it connects directly to the nearest cell tower to broadcast a "Code Red" distress signal.
+
+**ALEX:**
+This signal goes directly to emergency dispatchers—911 or 112. 
+It sends your GPS coordinates, your identity, and your live ECG data. The ambulance is dispatched before you even hit the floor.
+
+**(3:30 - 4:30) BUSINESS MODEL & MARKET**
+
+**ALEX:**
+Now, you might be thinking: "This sounds expensive. High-tech medical implants are for millionaires."
+
+**SAM:**
+Not LifeLink. 
+Our mission is universal access. 
+We have adopted a "Loss Leader" strategy for the hardware.
+The device itself costs just **€49.99**. That’s cheaper than a video game.
+
+**ALEX:**
+We make it accessible so anyone can afford the protection. 
+The real value comes from our service. 
+**The "SafeHeart" Subscription.**
+For **€9.99 a month**—less than a Netflix subscription—you get the 24/7 active monitoring, the direct line to emergency services, and the peace of mind.
+
+**SAM:**
+We target three main groups:
+1.  **High-risk individuals:** Heart patients.
+2.  **The Elderly:** Who often forget to wear devices.
+3.  **High-stress professionals:** Like us in IT, who work long hours and neglect our health.
+
+**(4:30 - 5:15) COMPETITION & CONCLUSION**
+
+**ALEX:**
+So, why is LifeLink the "Best Overall Gadget"?
+Apple Watch measures your heart beats... sometimes.
+Fitbit tracks your steps.
+LifeLink saves your life.
+
+**SAM:**
+It is invisible. It is immortal (battery-wise). And it is intelligent.
+
+**ALEX:**
+We aren’t just selling a gadget. We are selling the future of personal health. 
+A future where technology doesn’t ask for your attention. It just protects your existence.
+
+**BOTH:**
+Connect with LifeLink. Your Pulse, Connected.
+
+**(End of Presentation)**

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Dashboard | LinkLife</title>
+    <meta name="description" content="Live Medical Dashboard Simulation for LinkLife.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">❤️</span> LinkLife
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Product</a></li>
+                    <li><a href="sensor3d.html">Smart Wearable</a></li>
+                    <li><a href="dashboard.html" class="active">Medical UI</a></li>
+                    <li><a href="investors.html">Investors</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀️</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 120px; padding-bottom: 4rem;">
+        <div class="fade-in-up">
+            <h1 class="section-title" style="text-align: left; margin-bottom: 1rem;">Live Telemetry Interface</h1>
+            <p style="color: var(--text-muted); margin-bottom: 3rem; max-width: 600px;">
+                Direct feed from the LinkLife Wearable V1. This interface is actively monitored by response teams. Time
+                to detection: <strong style="color:var(--text-color);">0.4ms</strong>.
+            </p>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- ECG Chart -->
+            <div class="glass-panel fade-in-up delay-100" style="grid-column: 1 / -1;">
+                <div class="metric-header" style="margin-bottom: 1.5rem;">
+                    <span>Electrocardiogram Profile</span>
+                    <span style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span
+                            style="width: 8px; height: 8px; border-radius: 50%; background: var(--ecg-normal); box-shadow: 0 0 10px var(--ecg-normal);"></span>
+                        Live Connection
+                    </span>
+                </div>
+                <div class="chart-container large">
+                    <canvas id="ecgChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Heart Rate -->
+            <div class="glass-panel fade-in-up delay-200">
+                <div class="metric-header">Heart Rate (Avg)</div>
+                <div class="metric-value" style="color: var(--ecg-normal);" id="hrValue">
+                    72 <span class="metric-unit">BPM</span>
+                </div>
+                <div style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Normal Rhythm detected</div>
+            </div>
+
+            <!-- SpO2 -->
+            <div class="glass-panel fade-in-up delay-300">
+                <div class="metric-header">Blood Oxygen (SpO2)</div>
+                <div class="metric-value" style="color: var(--text-color);" id="spoValue">
+                    98 <span class="metric-unit">%</span>
+                </div>
+                <!-- Mini sparkline could go here, for now just text -->
+                <div style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Stable Saturation</div>
+            </div>
+
+            <!-- Risk Status -->
+            <div class="glass-panel fade-in-up delay-100">
+                <div class="metric-header">Immediate Risk Factor</div>
+                <div class="metric-value" style="color: var(--ecg-warning); font-size: 2.5rem;" id="riskValue">
+                    LOW <span class="metric-unit">0.05 index</span>
+                </div>
+                <div style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">No intervention needed
+                    currently</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;" class="fade-in-up delay-200">
+            <a href="alert-demo.html" class="btn btn-outline">Test Emergency Alert Scenario</a>
+        </div>
+    </main>
+
+    <footer style="border-top: 1px solid var(--glass-border); padding: 3rem 0;">
+        <div class="container"
+            style="display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.9rem;">
+            <p>&copy; 2026 LinkLife startup. Medical Professional Access Only.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/charts.js"></script>
+</body>
+
+</html>

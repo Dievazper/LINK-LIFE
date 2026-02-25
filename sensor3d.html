@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Sensor | LinkLife</title>
+    <meta name="description" content="Interactive 3D Sensor Experience">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .scene {
+            width: 100%;
+            height: 60vh;
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: grab;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .scene:active {
+            cursor: grabbing;
+        }
+
+        .model-container {
+            position: relative;
+            width: 200px;
+            height: 300px;
+            transform-style: preserve-3d;
+            transform: rotateX(15deg) rotateY(30deg);
+            transition: transform 0.1s ease-out;
+        }
+
+        /* The Device */
+        .device {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+            background: linear-gradient(145deg, #1a1a20, #0d0d10);
+            box-shadow:
+                0 0 50px rgba(255, 45, 85, 0.2),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.1),
+                inset -2px -2px 10px rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--glass-border);
+            transform: translateZ(20px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Inner Ring Sensor */
+        .sensor-ring {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #050505;
+            border: 2px solid #333;
+            box-shadow: 0 0 15px var(--accent-glow), inset 0 0 10px #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .sensor-core {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--ecg-normal);
+            box-shadow: 0 0 20px var(--ecg-normal);
+            animation: pulse-core 2s infinite;
+        }
+
+        @keyframes pulse-core {
+            0% {
+                transform: scale(0.9);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(0.9);
+                opacity: 0.8;
+            }
+        }
+
+        /* Depth Layers */
+        .layer-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+            background: #050508;
+            transform: translateZ(-20px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+        }
+
+        .layer-side {
+            position: absolute;
+            background: #111;
+            /* Simple fake extrusion */
+        }
+
+        .instructions {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--glass-bg);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">❤️</span> LinkLife
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Product</a></li>
+                    <li><a href="sensor3d.html" class="active">Smart Wearable</a></li>
+                    <li><a href="dashboard.html">Medical UI</a></li>
+                    <li><a href="investors.html">Investors</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀️</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 120px; padding-bottom: 4rem;">
+
+        <div class="fade-in-up text-center" style="text-align: center; margin-bottom: 2rem;">
+            <h1 class="section-title" style="margin-bottom: 1rem;">LinkLife Core Sensor</h1>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                Dual-optic physiological tracker. Medical grade precision housed in aerospace, hypoallergenic titanium
+                and glassmorphism composite.
+            </p>
+        </div>
+
+        <div class="glass-panel fade-in-up delay-100" style="padding: 0; position: relative; overflow: hidden;">
+            <div class="scene" id="scene">
+                <div class="model-container" id="model">
+                    <div class="layer-back"></div>
+                    <div class="device">
+                        <!-- Top branding -->
+                        <div
+                            style="position: absolute; top: 30px; color: #444; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px;">
+                            LINKLIFE</div>
+
+                        <div class="sensor-ring">
+                            <div class="sensor-core"></div>
+                        </div>
+
+                        <!-- Bottom details -->
+                        <div style="position: absolute; bottom: 30px; display: flex; gap: 10px;">
+                            <div style="width: 4px; height: 4px; border-radius: 50%; background: #444;"></div>
+                            <div style="width: 4px; height: 4px; border-radius: 50%; background: #444;"></div>
+                            <div style="width: 4px; height: 4px; border-radius: 50%; background: #444;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="instructions">
+                    <span>👆</span> Drag to inspect
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid" style="margin-top: 4rem;">
+            <div class="glass-panel fade-in-up delay-200">
+                <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Always On. Always Scanning.</h3>
+                <p style="color: var(--text-muted);">The LinkLife core continuously evaluates sub-dermal blood flow and
+                    electrical heart activity without killing your phone battery.</p>
+            </div>
+            <div class="glass-panel fade-in-up delay-300">
+                <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Millisecond Response</h3>
+                <p style="color: var(--text-muted);">If a life-threatening arrhythmia is detected, the device bypasses
+                    local processing and pushes directly to emergency endpoints.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer style="border-top: 1px solid var(--glass-border); padding: 3rem 0;">
+        <div class="container"
+            style="display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.9rem;">
+            <p>&copy; 2026 LinkLife startup.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/3d-sensor.js"></script>
+</body>
+
+</html>
