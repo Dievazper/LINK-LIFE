@@ -345,7 +345,7 @@
 
             <div class="dashboard-grid">
 
-                <a href="sensor3d.html" style="text-decoration: none; color: inherit;">
+                <a href="#3d-chip-section" style="text-decoration: none; color: inherit;">
                     <div class="glass-panel fade-in-up delay-100"
                         style="height: 100%; transition: transform 0.3s; cursor: pointer;"
                         onmouseover="this.style.transform='translateY(-10px)'"
@@ -358,16 +358,16 @@
                     </div>
                 </a>
 
-                <a href="dashboard.html" style="text-decoration: none; color: inherit;">
+                <a href="#app-section" style="text-decoration: none; color: inherit;">
                     <div class="glass-panel fade-in-up delay-200"
                         style="height: 100%; transition: transform 0.3s; cursor: pointer;"
                         onmouseover="this.style.transform='translateY(-10px)'"
                         onmouseout="this.style.transform='translateY(0)'">
-                        <div class="metric-header" style="margin-bottom: 1rem;"><span style="font-size:2rem;">📊</span>
-                            Medical Interface</div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Live Dashboard</h3>
-                        <p style="color: var(--text-muted);">Real-time animated ECG, heart rate monitoring, and patient
-                            status tracking for medical professionals.</p>
+                        <div class="metric-header" style="margin-bottom: 1rem;"><span style="font-size:2rem;">📱</span>
+                            Patient Hub App</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Mobile Interface</h3>
+                        <p style="color: var(--text-muted);">Real-time animated ECG, battery level, and automated
+                            emergency profile dispatch.</p>
                     </div>
                 </a>
 
@@ -413,7 +413,7 @@
         <!-- NEW SECTIONS ADDED -->
 
         <!-- 1. The 3D Intramuscular Chip -->
-        <section class="container" style="text-align: center; padding-top: 4rem;">
+        <section id="3d-chip-section" class="container" style="text-align: center; padding-top: 4rem;">
             <div class="fade-in-up">
                 <h2 class="section-title">The Sub-Dermal Architecture</h2>
                 <p
@@ -481,18 +481,21 @@
                 style="margin-top: 2rem; display: flex; text-align: left; gap: 2rem; color: var(--text-muted); justify-content: center; flex-wrap: wrap;">
                 <div
                     style="background: var(--glass-bg); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
-                    <strong>1. Prep:</strong> Local anesthesia applied to the deltoid.</div>
+                    <strong>1. Prep:</strong> Local anesthesia applied to the deltoid.
+                </div>
                 <div
                     style="background: var(--glass-bg); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
-                    <strong>2. Injection:</strong> Specialized applicator inserts the capsule.</div>
+                    <strong>2. Injection:</strong> Specialized applicator inserts the capsule.
+                </div>
                 <div
                     style="background: var(--glass-bg); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
-                    <strong>3. Withdrawal:</strong> Applicator removed, leaving sensor active for life.</div>
+                    <strong>3. Withdrawal:</strong> Applicator removed, leaving sensor active for life.
+                </div>
             </div>
         </section>
 
         <!-- 3. App Simulation -->
-        <section class="container" style="text-align: center; padding-top: 4rem;">
+        <section id="app-section" class="container" style="text-align: center; padding-top: 4rem;">
             <div class="fade-in-up">
                 <h2 class="section-title">The Patient Hub App</h2>
                 <p
